@@ -65,13 +65,16 @@
     // ※必ずレビュー前に上記挙動が問題ないか確認すること
 
     $(function () {
-      function test() {
-        $('.menu__list__childList', this).stop().slideDown();
-      }
-      function test2() {
-        $('.menu__list__childList', this).slideUp();
-      }
       $('.menu__list li').hover(test, test2)
+
+      function test() {
+        $('.menu__list__childList', this).stop(true, false).slideDown();
+      };
+      function test2() {
+        $('.menu__list__childList', this).stop(true, false).slideUp();
+      };
+
+
     })
   </script>
 </body>
